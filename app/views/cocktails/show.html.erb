@@ -1,9 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @cocktail.name %>
-</p>
+  <h1><%= @cocktail.name %></h1>
 
-<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
-<%= link_to 'Back', cocktails_path %>
+  <p>
+    <strong>Name:</strong>
+    <%= @cocktail.name %>
+  </p>
+
+  <p>
+    <strong>Ingredients:</strong>
+  </p>
+    <% @doses.each do |dose| %>
+      <p>
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+      </p>
+    <% end %>
+
+  <p>
+    <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %>
+  </p>
+
+  <%= link_to 'Back', cocktails_path %>
+</div>
