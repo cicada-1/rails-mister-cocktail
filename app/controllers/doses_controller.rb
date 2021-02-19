@@ -22,16 +22,13 @@ class DosesController < ApplicationController
   # DELETE /doses/1 or /doses/1.json
   def destroy
     @dose.destroy
-    respond_to do |format|
-      format.html { redirect_to doses_url, notice: "Dose was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    redirect_to cocktail_path(@dose.cocktail), notice: "Dose was successfully deleted."
   end
   
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_dose
-    @dose = Dose.find(params[:id])
+    @dose = Dose.find(params["format"])
   end
   
   # Only allow a list of trusted parameters through.
