@@ -3,13 +3,8 @@
 
   <h1><%= @cocktail.name %></h1>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @cocktail.name %>
-  </p>
-
   <h2>
-    <strong>Ingredients</strong>
+    Ingredients
     <%= link_to new_cocktail_dose_path(@cocktail), class: 'btn btn-primary' do %>
       <i class="fas fa-plus"></i> Add Ingredient
     <% end %>
