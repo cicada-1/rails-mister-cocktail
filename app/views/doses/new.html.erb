@@ -3,5 +3,7 @@
 
   <%= render 'form', dose: @dose %>
 
-  <%= link_to 'Back', cocktail_path(@cocktail) %>
+  <%= link_to cocktail_path(@cocktail), class: 'btn btn-primary' do %>
+    <i class="fas fa-undo-alt"></i> Back
+  <% end %>
 </div>

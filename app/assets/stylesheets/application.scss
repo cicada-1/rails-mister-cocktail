@@ -11,3 +11,25 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+@import "cocktails";
+@import "doses";
+
+body {
+  background-color: rgb(230, 230, 230);
+}
+
+nav {
+  background-color: #001F54;
+  a, button {
+    color: white;
+  }
+  a:hover, button:hover {
+    color: rgb(214, 214, 214);
+  }
+}
+
+.btn {
+  border-radius: 5px;
+  margin: 8px 0;
+}
