@@ -9,15 +9,16 @@
       <i class="fas fa-plus"></i> Add Ingredient
     <% end %>
   </h2>
-    <% @doses.each do |dose| %>
-      <p>
-        <%= dose.description %>
-        <%= dose.ingredient.name %>
-        <%= link_to doses_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
-      </p>
-    <% end %>
+
+  <% @doses.each do |dose| %>
+    <p>
+      <%= dose.description %>
+      <%= dose.ingredient.name %>
+      <%= link_to doses_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    </p>
+  <% end %>
 
   <%= link_to cocktails_path, class: 'btn btn-primary' do %>
     <i class="fas fa-undo-alt"></i> Back
