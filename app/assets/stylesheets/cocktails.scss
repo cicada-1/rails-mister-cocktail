@@ -12,3 +12,41 @@
     margin-bottom: 10px;
   }
 }
+
+.cocktails-grid {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cocktail-card {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  padding: 4px 8px;
+  border-radius: 5px;
+  a {
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px #2c2c2c;
+    &:hover {
+      text-decoration: none;
+      color: rgb(187, 187, 187);
+    }
+  }
+}
+
+p a {
+  color: black;
+  &:hover {
+    color: rgb(209, 7, 7);
+  }
+}
+
+img {
+  margin: 8px 0;
+}

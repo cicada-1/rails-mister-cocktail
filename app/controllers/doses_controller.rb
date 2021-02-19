@@ -13,7 +13,7 @@ class DosesController < ApplicationController
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to cocktail_path(@dose.cocktail), notice: "Dose was successfully created."
+      redirect_to cocktail_path(@dose.cocktail), notice: "Ingredient was added successfully."
     else
       render :new
     end
@@ -22,7 +22,7 @@ class DosesController < ApplicationController
   # DELETE /doses/1 or /doses/1.json
   def destroy
     @dose.destroy
-    redirect_to cocktail_path(@dose.cocktail), notice: "Dose was successfully deleted."
+    redirect_to cocktail_path(@dose.cocktail), notice: "Dose was deleted."
   end
   
   private
